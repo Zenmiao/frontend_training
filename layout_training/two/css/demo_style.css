@@ -1,0 +1,64 @@
+*{margin:0; padding:0; font-size:14px; color:#323232; list-style:none; font-family:Verdana, Geneva, sans-serif,"宋体";}
+a {color:#266392; text-decoration:none;}
+a:hover {text-decoration:underline;}
+#wrap {width:910px; margin:0 auto;}
+#header{}
+#logo{margin-top:5px; overflow:hidden; width:100%;}/*去除子元素的浮动影响*/
+#logo h1{width:218px; height:63px; background:url(../images/logo.gif) no-repeat; float:left; text-indent:-9999px;}/*设置与图片同样的尺寸然后设置负缩进隐藏h1*/
+#logo dl{float:right; display:block; margin-top:10px;}
+#logo dt{font-weight:bold; line-height:26px; color: #5a5a5a;}
+#logo dd{font-size:12px; color:#828282; line-height:24px;}
+
+#nav {width:100%; margin-top:8px; background:url(../images/navbg.gif) no-repeat; height:36px; overflow:hidden;}/*去除前面元素的浮动影响*/
+#nav ul{ width:94%; margin:0 auto; overflow:hidden;}
+#nav li{ float:left; text-align:center; line-height:34px; font-size:16px; font-weight:bold; margin:0 20px;}
+#nav li a{ color:#fff;}
+#nav li.current{ width:88px; background:url(../images/home.gif) 0 4px no-repeat;}
+#nav li.current a{color:#000;}
+#nav li.qq_lab { float:right; background:url(../images/arrow_r.gif) 0 8px no-repeat; padding-left:25px;} 
+
+#mainbody { margin-top:10px; width:100%; overflow:hidden;}
+.content { float:left; width:600px;}
+.margin_btm_15 {margin-bottom:15px;}
+.box{ width:100%; overflow:hidden; margin-bottom:15px;}
+h2{line-height:28px; border-bottom:1px solid #cce6f5; margin-bottom:10px;}
+h2 span{float:right;}
+h2 span a{font-size:12px; font-weight:normal;}
+.software_list { width:100%; overflow:hidden;}
+.software_list li { width:100%; overflow:hidden; margin-bottom:15px;}
+.software_list li dl { float:left; padding-left:45px;}/*设置左浮动，然后设置左间距，容纳图标*/
+.new {background:url(../images/new.gif) no-repeat right 4px; padding-right:15px;}/*设置显示“新”图像，设置背景图案居右，同时设置右间距以显示图像*/
+.software_1 {background:url(../images/icon_1.gif) no-repeat 0 5px;}/*不同软件的图标不同，因此要分布设置*/
+.software_2 {background:url(../images/icon_2.gif) no-repeat 0 5px;}
+.software_3 {background:url(../images/icon_3.gif) no-repeat 0 5px;}
+.software_4 {background:url(../images/icon_4.gif) no-repeat 0 5px;}
+.software_5 {background:url(../images/icon_5.gif) no-repeat 0 5px;}
+.software_6 {background:url(../images/icon_6.gif) no-repeat 0 5px;}
+.software_list li dt { font-size:12px; color:#828282; line-height:26px;}
+.software_list li dt a { font-weight:bold; margin-right:10px; text-decoration:underline;}
+.software_list li dd {line-height:24px;}
+.software_list li span { float:right;margin-top:5px;}
+.software_list li span a {text-decoration:underline; font-size:12px;}
+.download { background:url(../images/downicon.gif) no-repeat 0 6px; padding:3px 0 0 15px; }/*设置a标签左间距，容纳图像*/
+/*分清楚哪些是可以复用的，哪些是不同的必须单独设置的*/
+/*利用单独添加类的方法设置单独样式*/
+
+.sidebar {float:right; width:280px;}/*两边分别设置浮动然后指定宽度*/
+.sidebar li a {font-size:12px;}
+.newslist li {line-height:22px;}
+
+.downlist li { padding-left:23px; line-height:26px; margin-bottom:5px;}
+.downlist li span { float:right;}
+.downlist li span a {text-decoration:underline;}
+.soft_r_1 {background:url(../images/soft_r_1.gif) no-repeat 0 5px;}
+.soft_r_2 {background:url(../images/soft_r_2.gif) no-repeat 0 5px;}
+.soft_r_3 {background:url(../images/soft_r_3.gif) no-repeat 0 5px;}
+.soft_r_4 {background:url(../images/soft_r_4.gif) no-repeat 0 5px;}
+.soft_r_5 {background:url(../images/soft_r_5.gif) no-repeat 0 5px;}
+.soft_r_6 {background:url(../images/soft_r_6.gif) no-repeat 0 5px;}
+
+.fri_link { width:100%;}
+.fri_link a { width:88px; float:left; font-size:12px; margin-right:5px; line-height:26px;}
+
+#footer {margin-top:10px; padding:15px 0; text-align:center; background:#f8f8f8; border-top:1px solid #e6e6e6;}
+#footer li { font-size:12px;  color:#9e9e9e; line-height:24px; }
