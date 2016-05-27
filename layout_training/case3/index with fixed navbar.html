@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绝对定位布局</title>
+    <style type="text/css">
+        * {
+            font-size: 12px;
+            color: rgb(51, 51, 51);
+            font-family: Verdana, Geneva, sans-serif, 宋体;
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+        }
+        .wrap {width:780px; margin:0 auto; border-left: 1px #ddd solid; padding: 0 10px;border-right: 1px #ddd solid; padding: 0 10px;position: relative;}
+        h1 {font-size: 30px; font-family: 微软雅黑; height: 80px; line-height: 80px; color: #fff;background:#3399cc; font-weight:normal; text-indent: 30px; width: 100%; overflow: hidden; }
+
+        .header {position: fixed;z-index: 20;width: 780px;top: 0;}
+        .navbar {background: #36AFCB;}
+        .navbar ul {width: 100%; overflow: hidden;}
+        .navbar li a{float: left; margin:0 30px; font-size: 26px; color: #FFF; text-decoration: none; display: block;line-height: 28px;}
+        .navbar li a:hover{border-bottom:3px #C00 solid ;}
+        .navbar li.current a {border-bottom:3px #C00 solid ;}
+
+
+        .mainbody {width: 100%; overflow: hidden; padding-top: 130px; position: relative;}
+        .sidebar {width: 180px; }
+        .sidebar dl {padding-bottom:8px;}
+        .sidebar dt {background:#3399CC; font-size: 14px; line-height: 32px; color: #fff; text-indent: 14px; font-family: 微软雅黑; margin-bottom: 12px;}
+        .sidebar dd {line-height:20px; text-indent: 15px;}
+        .sidebar dd a {text-decoration: none;}
+        .sidebar dd.current a {color: red;}
+        .sidebar dd a:hover {text-decoration: underline;color: red;}
+
+        .content {position: absolute; margin-left:200px; top: 130px;}
+        h2 {font-size: 24px; font-family: 微软雅黑; font-weight:normal;}
+        .pageto {width:100%; margin-top: 6px; border-top:1px #9e9e9e solid;border-bottom: 4px #9e9e9e solid;}
+        .pageto a { text-decoration: none; line-height: 40px; background: #ebebeb; padding: 5px 20px; margin: 10px 10px 20px 10px;border: 1px #bbbbbb solid; }
+
+        h3 {margin-top: 10px; line-height: 26px;}
+        .content p {line-height: 24px;}
+        .disline {margin-top: 10px; border-bottom: 1px #9e9e9e dashed;}
+
+        .content dt {line-height: 20px; font-weight: bold;margin-top: 5px;}
+        .content dd {line-height: 22px;margin:5px 0 8px;}
+
+        .exp {color: #900b09;text-decoration: underline;}
+        .tips {margin-top: 20px; color: #b1adaa}
+
+        .footer {height: 45px; background: #DDDDDD; text-align: center;line-height: 45px;margin: 10px 0;}
+        .footer p {color: #999;}
+
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="header">
+        <h1>前端开发教程</h1>
+        <div class="navbar">
+            <ul>
+                <li class="current"><a href="#">CSS</a> </li>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">jQuery</a></li>
+                <li><a href="#">Ajax</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="mainbody">
+        <div class="sidebar">
+            <dl>
+                <dt>CSS 基础教程</dt>
+                <dd class="current"><a href="#">CSS 简介</a></dd>
+                <dd><a href="#">CSS 基础语法</a></dd>
+                <dd><a href="#">CSS 高级语法</a></dd>
+                <dd><a href="#">CSS 派生选择器</a></dd>
+                <dd><a href="#">CSS id 选择器</a></dd>
+                <dd><a href="#">CSS 类选择器</a></dd>
+                <dd><a href="#">CSS 属性选择器</a></dd>
+                <dd><a href="#">CSS 创建</a></dd>
+            </dl>
+            <dl>
+                <dt>CSS 样式</dt>
+                <dd><a href="#">CSS 背景</a></dd>
+                <dd><a href="#">CSS 文本</a></dd>
+                <dd><a href="#">CSS 字体</a></dd>
+                <dd><a href="#">CSS 链接</a></dd>
+                <dd><a href="#">CSS 列表</a></dd>
+                <dd><a href="#">CSS 表格</a></dd>
+                <dd><a href="#">CSS 轮廓</a></dd>
+            </dl>
+            <dl>
+                <dt>CSS 盒子模型</dt>
+                <dd><a href="#">CSS 盒子模型概述</a></dd>
+                <dd><a href="#">CSS 内边距</a></dd>
+                <dd><a href="#">CSS 边框</a></dd>
+                <dd><a href="#">CSS 外边距</a></dd>
+                <dd><a href="#">CSS 外边距合并</a></dd>
+                <dd><a href="#">CSS 表格</a></dd>
+            </dl>
+            <dl>
+                <dt>CSS 定位</dt>
+                <dd><a href="#">CSS 定位概述</a></dd>
+                <dd><a href="#">CSS 相对定位</a></dd>
+                <dd><a href="#">CSS 绝对定位</a></dd>
+                <dd><a href="#">CSS 浮动</a></dd>
+            </dl>
+            <dl>
+                <dt>CSS 选择器</dt>
+                <dd><a href="#">CSS 元素选择器</a></dd>
+                <dd><a href="#">CSS 选择器分组</a></dd>
+                <dd><a href="#">CSS 类选择器详解</a></dd>
+                <dd><a href="#">CSS ID 选择器详解</a></dd>
+                <dd><a href="#">CSS 属性选择器详解</a></dd>
+                <dd><a href="#">CSS 后代选择器</a></dd>
+                <dd><a href="#">CSS 子元素选择器</a></dd>
+                <dd><a href="#">CSS 相邻兄弟选择器</a></dd>
+                <dd><a href="#">CSS 伪类</a></dd>
+                <dd><a href="#">CSS 伪元素</a></dd>
+            </dl>
+            <dl>
+                <dt>CSS 高级</dt>
+                <dd><a href="#">CSS 对齐</a></dd>
+                <dd><a href="#">CSS 尺寸</a></dd>
+                <dd><a href="#">CSS 分类</a></dd>
+                <dd><a href="#">CSS 导航栏</a></dd>
+                <dd><a href="#">CSS 图片库</a></dd>
+                <dd><a href="#">CSS 图片透明</a></dd>
+                <dd><a href="#">CSS 媒介类型</a></dd>
+                <dd><a href="#">CSS 注意事项</a></dd>
+                <dd><a href="#">CSS 总结</a></dd>
+            </dl>
+        </div>
+        <div class="content">
+            <h2>CSS 简介</h2>
+            <div class="pageto">
+                <a href="#">上一章</a>
+                <a href="#">下一章</a>
+            </div>
+            <h3>你应该知道这些知识</h3>
+            <p>在继续之前，你应该有一个以下基本认识：</p>
+            <p>· HTML / XHTML</p>
+            <p>如果您希望首先学习这些项目，我们的主页上可以找到教程。</p>
+            <div class="disline"></div>
+            <h3>什么是CSS？</h3>
+            <p>CSS即级联样式表。 它是一种用来表现HTML（标准通用标记语言的一个应用）或XML（标准通用标记语言的一个子集）等文件样式的计算机语言。</p>
+            <div class="disline"></div>
+            <h3>基本信息</h3>
+            <p>CSS目前最新版本为CSS3，是能够真正做到网页表现与内容分离的一种样式设计语言。相对于传统HTML的表现而言，CSS能够对网页中的对象的位置排版进行像素级的精确控制，
+                支持几乎所有的字体字号样式，拥有对网页对象和模型样式编辑的能力，并能够进行初步交互设计，是目前基于文本展示最优秀的表现设计语言。CSS能够根据不同使用者的理
+                解能力，简化或者优化写法，针对各类人群，有较强的易读性。</p>
+            <div class="disline"></div>
+            <h3>发展历史</h3>
+            <dl>
+                <dt>CSS1</dt>
+                <dd>作为一项W3C推荐，CSS1发布于 1996年12月17 日。1999 年1月11日，此推荐被重新修订。</dd>
+            </dl>
+            <dl>
+                <dt>CSS2</dt>
+                <dd>作为一项 W3C 推荐，CSS2发布于 1999年1月11日。CSS2添加了对媒介（打印机和听觉设备）和可下载字体的支持。</dd>
+            </dl>
+            <dl>
+                <dt>CSS3</dt>
+                <dd>CSS3 计划将 CSS 划分为更小的模块。</dd>
+            </dl>
+            <p class="exp">亲自体验一下！</p>
+            <div class="pageto">
+                <a href="#">上一章</a>
+                <a href="#">下一章</a>
+            </div>
+            <p class="tips">本站提供的内容仅用于学习培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>慕课©版权所有</p>
+    </div>
+</div>
+</body>
+</html>
