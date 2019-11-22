@@ -1,2 +1,2 @@
 # frontend_training
-Start my frontend career.
+Emmmmm, nothing to say.
